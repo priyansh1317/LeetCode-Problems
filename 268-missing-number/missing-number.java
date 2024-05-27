@@ -1,11 +1,11 @@
 class Solution {
     public int missingNumber(int[] nums) {
         int n = nums.length;
-        int sumN=n*(n+1)/2;
-        int sum = 0;
-        for(int i: nums){
-            sum+=i;
+        int sumOfConsecutiveN = (n+1) * n/2;
+        int sumOfGivenArray = 0;
+        for(int i=0; i<n; i++){
+            sumOfGivenArray += nums[i];
         }
-        return sumN-sum;
+        return sumOfConsecutiveN - sumOfGivenArray;
     }
 }
